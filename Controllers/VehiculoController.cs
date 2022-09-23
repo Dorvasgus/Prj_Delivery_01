@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using PRJ_Delivery.Data;
-using PRJ_Delivery.DTOs;
-using PRJ_Delivery.Helpers;
+using Delivery.Data;
+using Delivery.DTOs;
+using Delivery.Helpers;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace PRJ_Delivery.Controllers
+namespace Delivery.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -26,7 +26,7 @@ namespace PRJ_Delivery.Controllers
         {
             try
             {
-                var query = context.Vehiculos
+                var query = context.Vehiculo
                 .Include(x => x.TipoVehiculo)
                 .AsQueryable();
 
@@ -34,7 +34,7 @@ namespace PRJ_Delivery.Controllers
                 var entidades = await query.Paginar(paginacion).ToListAsync();
                 var list = mapper.Map<List<VehiculoDTO>>(entidades);
 
-                return Ok(new ResponseListDTO<VehiculoDTO>
+                return Ok(new ResponseDTO<VehiculoDTO>
                 {
                     cantidad = int.Parse(datosPaginacion["CantidadPaginas"]),
                     pagina = paginacion.Pagina,

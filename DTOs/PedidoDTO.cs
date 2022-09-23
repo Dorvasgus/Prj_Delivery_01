@@ -1,17 +1,30 @@
 ﻿using Delivery.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Delivery.DTOs
 {
     public class PedidoDTO
     {
+        [Required]
+       
         public string Numero { get; set; } = null!;
+        [Required]
+        [DataType(DataType.Date)]
         public DateTime FechaHoraCreacion { get; set; }
+        [Required]
+        [DataType(DataType.Date)]
         public DateTime FechaHoraEntrega { get; set; }
+        [Required]
         public string Calle { get; set; } = null!;
+        [Required]
         public int Persona { get; set; }
+        [Required]
         public int Factura { get; set; }
+        [Required]
         public int Localidad { get; set; }
+        [Required]
         public string NombreCliente { get; set; } = null!;
+        [Required]
         public int TelefonoCliente { get; set; }
         public int Detalle { get; set; }
 

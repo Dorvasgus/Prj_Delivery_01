@@ -1,4 +1,5 @@
 ﻿using Delivery.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Delivery.DTOs
 {
@@ -8,11 +9,16 @@ namespace Delivery.DTOs
         {
             Personas = new HashSet<PersonaDTO>();
         }
-
+        [Required]
         public string UserName { get; set; } = null!;
+        [Required]
         public string Password { get; set; } = null!;
+        [Required]
+        [Url]
         public string Correo { get; set; } = null!;
+        [Required]
         public string Rol { get; set; } = null!;
+        [Required]
         public int Vehiculo { get; set; }
 
         public virtual VehiculoDTO VehiculoNavigation { get; set; } = null!;
