@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JOSE GONZALES\\source\\repos\\Delivery\\Delivery.csproj": {}
+    "D:\\Universidad\\Sexto Semestre\\Programacion Web II\\Delivery\\Delivery\\Delivery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JOSE GONZALES\\source\\repos\\Delivery\\Delivery.csproj": {
+    "D:\\Universidad\\Sexto Semestre\\Programacion Web II\\Delivery\\Delivery\\Delivery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JOSE GONZALES\\source\\repos\\Delivery\\Delivery.csproj",
+        "projectUniqueName": "D:\\Universidad\\Sexto Semestre\\Programacion Web II\\Delivery\\Delivery\\Delivery.csproj",
         "projectName": "Delivery",
-        "projectPath": "C:\\Users\\JOSE GONZALES\\source\\repos\\Delivery\\Delivery.csproj",
-        "packagesPath": "C:\\Users\\JOSE GONZALES\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JOSE GONZALES\\source\\repos\\Delivery\\obj\\",
+        "projectPath": "D:\\Universidad\\Sexto Semestre\\Programacion Web II\\Delivery\\Delivery\\Delivery.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\Universidad\\Sexto Semestre\\Programacion Web II\\Delivery\\Delivery\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JOSE GONZALES\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://github.com/ErikEJ/EFCorePowerTools": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -77,8 +77,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -90,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

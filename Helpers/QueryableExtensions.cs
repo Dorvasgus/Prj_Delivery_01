@@ -1,35 +1,26 @@
 ﻿using Delivery.DTOs;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Delivery.Helpers
+namespace PRJ_Delivery.Helpers
 {
     public static class QueryableExtensions
     {
-        public static IQueryable<T> Paginar<T>(this IQueryable<T> queryable, PaginacionDTO paginacionDTO)
+        public static IQueryable<T> Paginar<T>(this IQueryable<T> queryable, PaginacionDTO paginacion)
         {
             return queryable
-                .Skip((paginacionDTO.Pagina - 1) * paginacionDTO.CantidadRegistrosPorPagina)
-                .Take(paginacionDTO.CantidadRegistrosPorPagina);
-        }
+                .Skip((paginacion.Pagina - 1) * paginacion.CantidadRegistroPorPagina)
+                .Take(paginacion.CantidadRegistroPorPagina);
 
-        public async static Task<Dictionary<string, string>> datosPaginacion<T>(
-     this IQueryable<T> queryable, int cantidadRegistrosPorPagina)
+        }
+        public static async Task<Dictionary<string, string>> datosPaginacion<T>(this IQueryable<T> queryable, int cantidadRegistroPorPagina)
         {
             double cantidad = await queryable.CountAsync();
-            double cantidadPaginas = Math.Ceiling(cantidad / cantidadRegistrosPorPagina);
-
-            return new Dictionary<string, string> {
-                { "cantidadPaginas",  cantidadPaginas.ToString() },
-                { "totalRegistros",  cantidad.ToString() },
+            double cantidadPagina = Math.Ceiling(cantidad / cantidadRegistroPorPagina);
+            return new Dictionary<string, string>
+            {
+                { "CantidadPaginas", cantidadPagina.ToString() },
+                { "TotalRegistros", cantidad.ToString() }
             };
-
-
         }
-
-
     }
 }

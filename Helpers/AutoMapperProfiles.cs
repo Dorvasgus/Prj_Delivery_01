@@ -1,26 +1,19 @@
 ﻿using AutoMapper;
 using Delivery.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Delivery.Models;
 
-namespace Delivery.Helpers
+namespace PRJ_Delivery.Helpers
 {
     public class AutoMapperProfiles : Profile
     {
         public AutoMapperProfiles()
         {
+            // mapeo general para las personas
+            
+            CreateMap< Persona, PersonaDTO>();
+            // mapeo general para las vehiculo
 
-            //CreateMap<MateriaContenido, MateriaContenidoDTO>()
-            //    .ForMember(x => x.EstadoNombre, x => x.MapFrom(y => y.IdEstadoNavigation != null ? y.IdEstadoNavigation.Nombre : ""))
-            //    .ForMember(x => x.ModeloEstudioNombre, x => x.MapFrom(y => y.IdModeloEstudioNavigation != null ? y.IdModeloEstudioNavigation.Nombre : ""))
-            //      .ForMember(x => x.GrupoAcademicoNombre, x => x.MapFrom(y => y.GrupoAcademico != null ? y.GrupoAcademico.Nombre : ""))
-            //    .ReverseMap();
-
-
-
-
+            CreateMap<Vehiculo, VehiculoDTO>();
         }
     }
 }

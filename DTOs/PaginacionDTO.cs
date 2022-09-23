@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Delivery.DTOs
+﻿namespace Delivery.DTOs
 {
     public class PaginacionDTO
     {
         public int Pagina { get; set; } = 1;
+        public int cantidadRegistroPorPagina = 10;
+        public int cantidadMaximaRegistrosPorPagina = 50;
 
-        private int cantidadRegistrosPorPagina = 10;
-        private readonly int cantidadMaximaRegistrosPorPagina = 50;
-
-        public int CantidadRegistrosPorPagina
+        public int CantidadRegistroPorPagina
         {
-            get => cantidadRegistrosPorPagina;
+            get => cantidadRegistroPorPagina;
             set
             {
-                cantidadRegistrosPorPagina = (value > cantidadMaximaRegistrosPorPagina) ? cantidadMaximaRegistrosPorPagina : value;
+                cantidadRegistroPorPagina = (value > cantidadMaximaRegistrosPorPagina) ? cantidadMaximaRegistrosPorPagina : value;
             }
         }
     }
